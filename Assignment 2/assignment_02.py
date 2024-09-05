@@ -220,10 +220,10 @@ def q5():
 
 def main():
     """ Main entry point of the app """
-    # q1()
-    # q2()
-    # q3()
-    # q4()
+    q1()
+    q2()
+    q3()
+    q4()
     q5()
     
 
