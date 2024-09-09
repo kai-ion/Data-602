@@ -10,6 +10,21 @@ Sample string: “CUNY sps”
 6. Write a Python program to create a function that takes one argument, and that argument will be multiplied with an unknown given number.
 """
 
+"""Terminal Example
+Enter the length of the rectangle: 5
+Enter the width of the rectangle: 10
+Area of the rectangle: 50.0, Perimeter of the rectangle: 30.0
+Enter a number to check if it's even or odd: 2
+The number 2 is even.
+Enter a string: (Sample string: “CUNY sps”)CUNY sps
+Number of upper case characters: 4, Number of lower case characters: 3
+The sum of the list is: 15
+Global variable: 10
+Local variable inside function: 5
+Enter a number to multiply with a random unknown number: 5
+The result of multiplying 5 with the randomly generated number 37 is: 185
+"""
+
 ###------------------------------------------------------------------------------------------------------
 # Q1. Function to calculate the area and perimeter of a rectangle
 def rectangle_size(length, width):
