@@ -1,5 +1,31 @@
 __author__ = "Cai Lin"
 
+"""Sample output
+###Q1 BankAccount###
+Bank Name: Chase
+Account Holder: Cai Lin
+Balance: $0.00
+Deposited $1000.00. New balance is $1000.00.
+Withdrew $500.00. New balance is $500.00.
+Cannot withdraw $600.00. Insufficient funds.
+Bank Name: Chase
+Account Holder: Cai Lin
+Balance: $500.00
+
+
+
+
+###Q2 Box###
+Length: 5, Width: 10
+Length: 3, Width: 4
+Length: 5, Width: 10
+False
+True
+Length: 10, Width: 20
+Length: 6, Width: 8
+Length: 16, Width: 28
+"""
+
 ###------------------------------------------------------------------------------------------------------    
 # Q1: Create a class called BankAccount that has four attributes: bankname, firstname,
 # lastname, and balance. The default balance should be set to 0.
