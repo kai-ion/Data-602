@@ -92,7 +92,7 @@ def exercise08(df, column_name):
     Given a DataFrame 'df' and a 'column_name' as a string, return the average value of that column.
     '''
     # ------ Place code below here \/ \/ \/ ------
-    
+    avg_value = df[column_name].mean()
     # ------ Place code above here /\ /\ /\ ------
     return avg_value
 
@@ -131,12 +131,12 @@ class TestAssignment(unittest.TestCase):
        df = exercise07(df)
        self.assertEqual(df.shape[0], 2)  
 
-    # def test_exercise08(self):
-    #    df = pd.DataFrame({'A': [10, 20, 30], 'B': [20, 30, 40]})
-    #    avg_A = exercise08(df, 'A')
-    #    avg_B = exercise08(df, 'B')
-    #    self.assertEqual(avg_A, 20)
-    #    self.assertEqual(avg_B, 30)
+    def test_exercise08(self):
+       df = pd.DataFrame({'A': [10, 20, 30], 'B': [20, 30, 40]})
+       avg_A = exercise08(df, 'A')
+       avg_B = exercise08(df, 'B')
+       self.assertEqual(avg_A, 20)
+       self.assertEqual(avg_B, 30)
 
 if __name__ == '__main__':
    unittest.main()
