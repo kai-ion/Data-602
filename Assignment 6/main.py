@@ -39,7 +39,7 @@ def exercise03(df):
     Given a DataFrame 'df', filter out and return a new DataFrame containing only the rows where 'value' is greater than 50.
     '''
     # ------ Place code below here \/ \/ \/ ------
-    
+    filtered_df = df[df['value'] > 50]
     # ------ Place code above here /\ /\ /\ ------
     return filtered_df
 
@@ -50,7 +50,11 @@ def exercise04():
     Each dictionary represents a row, with 'city' and 'data' as keys.
     '''
     # ------ Place code below here \/ \/ \/ ------
-
+    df4 = pd.DataFrame([
+        {'city': 'New York', 'data': 100},
+        {'city': 'Brooklyn', 'data': 200},
+        {'city': 'Staten Island', 'data': 300}
+    ])
     # ------ Place code above here /\ /\ /\ ------
     return df4
 
@@ -102,15 +106,15 @@ class TestAssignment(unittest.TestCase):
         df = exercise02()
         self.assertTrue('id' in df.columns and 'name' in df.columns and 'value' in df.columns)
 
-    # def test_exercise03(self):
-    #     df = pd.DataFrame({'id': [1, 2, 3], 'name': ['A', 'B', 'C'], 'value': [45, 55, 65]})
-    #     df = exercise03(df)
-    #     self.assertEqual(df.shape[0], 2)  
+    def test_exercise03(self):
+        df = pd.DataFrame({'id': [1, 2, 3], 'name': ['A', 'B', 'C'], 'value': [45, 55, 65]})
+        df = exercise03(df)
+        self.assertEqual(df.shape[0], 2)  
 
-    # def test_exercise04(self):
-    #     df4 = exercise04()
-    #     self.assertTrue(set(df4.columns) == {"city", "data"})
-    #     self.assertEqual(len(df4), 3)
+    def test_exercise04(self):
+        df4 = exercise04()
+        self.assertTrue(set(df4.columns) == {"city", "data"})
+        self.assertEqual(len(df4), 3)
 
     # def test_exercise05(self):
     #    df = pd.DataFrame({'city': ['A', 'B', 'C'], 'data': [1, 2, 3]})
