@@ -28,6 +28,53 @@ array([1,2,3,4])
 url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
 iris = np.genfromtxt(url, delimiter=',', dtype='float', usecols=[0,1,2,3])
 """
+"""Sample Output
+###Q1### Similarities and Differences of Numpy and Pandas:
+numpy provides ndarray while pandas provides Series and DataFrame, both of which are built on top of ndarray
+
+NumPy Array:
+[[1 2 3]
+ [4 5 6]]
+
+Pandas DataFrame:
+   A  B  C
+0  1  2  3
+1  4  5  6
+
+
+###Q2### What is the ndarray in NumPy?
+multi-dimensional array
+
+[[1 2 3]
+ [4 5 6]]
+
+
+###Q3### Create a 1D array of numbers from 0 to 9.
+[0 1 2 3 4 5 6 7 8 9]
+
+
+###Q4### Extract all odd numbers from array1.
+Original array: [0 1 2 3 4 5 6 7 8 9]
+Odd numbers: [1 3 5 7 9]
+
+
+###Q5### Get the common items between a and b.
+Array a: [1 2 3 2 3 4 3 4 5 6]
+Array b: [ 7  2 10  2  7  4  9  4  9  8]
+Common items: [2 4]
+
+
+###Q6### From array a remove all items present in array b.
+Array a: [1 2 3 4 5]
+Array b: [5 6 7 8 9]
+Array after removing items present in b: [1 2 3 4]
+
+
+###Q7### Find out if iris has any missing values.
+Number of missing values in the iris dataset: 0
+"""
+
+
 import numpy as np
 import pandas as pd
 

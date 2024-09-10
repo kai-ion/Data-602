@@ -16,10 +16,7 @@ def exercise01():
     Fill the DataFrame with arbitrary data.
     '''
     # ------ Place code below here \/ \/ \/ ------
-    df1 = pd.DataFrame({
-        'Name': ['A', 'B', 'C', 'D', 'E'],
-        'Age': [1, 2, 3, 4, 5]
-    })
+    
     # ------ Place code above here /\ /\ /\ ------
     return df1
 
@@ -29,8 +26,7 @@ def exercise02():
     The dataset contains columns 'id', 'name', 'value'. Print the first 5 rows as part of the exercise.
     '''
     # ------ Place code below here \/ \/ \/ ------
-    df2 = pd.read_csv('Assignment 6\data.csv')
-    print(df2.head())  # Print the first 5 rows   
+   
     # ------ Place code above here /\ /\ /\ ------
     return df2
 
@@ -102,37 +98,37 @@ class TestAssignment(unittest.TestCase):
         df = exercise02()
         self.assertTrue('id' in df.columns and 'name' in df.columns and 'value' in df.columns)
 
-    # def test_exercise03(self):
-    #     df = pd.DataFrame({'id': [1, 2, 3], 'name': ['A', 'B', 'C'], 'value': [45, 55, 65]})
-    #     df = exercise03(df)
-    #     self.assertEqual(df.shape[0], 2)  
+    def test_exercise03(self):
+        df = pd.DataFrame({'id': [1, 2, 3], 'name': ['A', 'B', 'C'], 'value': [45, 55, 65]})
+        df = exercise03(df)
+        self.assertEqual(df.shape[0], 2)  
 
-    # def test_exercise04(self):
-    #     df4 = exercise04()
-    #     self.assertTrue(set(df4.columns) == {"city", "data"})
-    #     self.assertEqual(len(df4), 3)
+    def test_exercise04(self):
+        df4 = exercise04()
+        self.assertTrue(set(df4.columns) == {"city", "data"})
+        self.assertEqual(len(df4), 3)
 
-    # def test_exercise05(self):
-    #    df = pd.DataFrame({'city': ['A', 'B', 'C'], 'data': [1, 2, 3]})
-    #    df = exercise05(df)
-    #    self.assertTrue('data_squared' in df.columns)
-    #    self.assertEqual(list(df['data_squared']), [1, 4, 9])
+    def test_exercise05(self):
+       df = pd.DataFrame({'city': ['A', 'B', 'C'], 'data': [1, 2, 3]})
+       df = exercise05(df)
+       self.assertTrue('data_squared' in df.columns)
+       self.assertEqual(list(df['data_squared']), [1, 4, 9])
 
-    # def test_exercise06(self):
-    #    df = exercise06()
-    #    self.assertTrue('A' in df.columns and 'B' in df.columns and 'C' in df.columns)
+    def test_exercise06(self):
+       df = exercise06()
+       self.assertTrue('A' in df.columns and 'B' in df.columns and 'C' in df.columns)
 
-    # def test_exercise07(self):
-    #    df = pd.DataFrame({'A': [1, 2, None, 4], 'B': [None, 2, 3, 4]})
-    #    df = exercise07(df)
-    #    self.assertEqual(df.shape[0], 2)  
+    def test_exercise07(self):
+       df = pd.DataFrame({'A': [1, 2, None, 4], 'B': [None, 2, 3, 4]})
+       df = exercise07(df)
+       self.assertEqual(df.shape[0], 2)  
 
-    # def test_exercise08(self):
-    #    df = pd.DataFrame({'A': [10, 20, 30], 'B': [20, 30, 40]})
-    #    avg_A = exercise08(df, 'A')
-    #    avg_B = exercise08(df, 'B')
-    #    self.assertEqual(avg_A, 20)
-    #    self.assertEqual(avg_B, 30)
+    def test_exercise08(self):
+       df = pd.DataFrame({'A': [10, 20, 30], 'B': [20, 30, 40]})
+       avg_A = exercise08(df, 'A')
+       avg_B = exercise08(df, 'B')
+       self.assertEqual(avg_A, 20)
+       self.assertEqual(avg_B, 30)
 
 if __name__ == '__main__':
    unittest.main()
