@@ -130,7 +130,8 @@ def exercise11(n):
     Reshape the array. The reshaped array, array_reshaped, should be n/3 columns and 3 rows
     '''
     # ------ Place code below here \/ \/ \/ ------
-
+    array_1d = np.arange(n)
+    array_reshaped = array_1d.reshape(3, n//3)
     # ------ Place code above here /\ /\ /\ ------  
     return array_1d, array_reshaped
 
@@ -140,7 +141,7 @@ def exercise12(n):
     A checkerboard matrix is a matrix with alternating 1s and 0s across rows and columns with the top left value equal to 1
     '''
     # ------ Place code below here \/ \/ \/ ------
-    
+    checkerboard_matrix = np.tile([[1, 0], [0, 1]], (n, n))
 
     # ------ Place code above here /\ /\ /\ ------ 
 
@@ -153,7 +154,10 @@ def exercise13(n):
     
     '''
     # ------ Place code below here \/ \/ \/ ------
-
+    date_range = pd.date_range(start='1/1/2010', periods=n)
+    s = pd.Series(np.random.randint(0, n, n), index=date_range)
+    s.cumsum().plot()
+    plt.show()
    
     # ------ Place code above here /\ /\ /\ ------ 
     return s
@@ -166,7 +170,7 @@ def exercise14(words):
     Using Series.map() and lambdas may help.
     '''
     # ------ Place code below here \/ \/ \/ ------
-
+    df = pd.Series(words).map(lambda x: len(x))
 
     # ------ Place code above here /\ /\ /\ ------ 
     return df
@@ -178,7 +182,8 @@ def exercise15():
     and just the street address and zip code columns. This can be done with one line of code.
     '''
     # ------ Place code below here \/ \/ \/ ------
-
+    df = exercise08()[0]
+    df = df.iloc[::5][['street', 'zip']]
 
 
     # ------ Place code above here /\ /\ /\ ------ 
@@ -186,40 +191,40 @@ def exercise15():
 
 
 class TestAssignment5(unittest.TestCase):
-    # def test_exercise15(self):
-    #     print('Skipping exercise 15')
-    #     df = exercise15()
-    #     print(df)
+    def test_exercise15(self):
+        print('Skipping exercise 15')
+        df = exercise15()
+        print(df)
     
-    # def test_exercise14(self):
-    #     print('Skipping exercise 14')
-    #     df = exercise14(['cat','frog','walrus','antelope'])
-    #     print(df)
+    def test_exercise14(self):
+        print('Skipping exercise 14')
+        df = exercise14(['cat','frog','walrus','antelope'])
+        print(df)
 
-    # def test_exercise13(self):
-    #     print('Testing exercise 13')
-    #     s= exercise13(1000)
-    #     self.assertEqual(s.index[0],pd.Timestamp('2010-01-01 00:00:00'))
-    #     self.assertEqual(len(s.index),1000)
+    def test_exercise13(self):
+        print('Testing exercise 13')
+        s= exercise13(1000)
+        self.assertEqual(s.index[0],pd.Timestamp('2010-01-01 00:00:00'))
+        self.assertEqual(len(s.index),1000)
 
-    # def test_exercise12(self):
-    #     print('Testing exercise 12')
-    #     cm = exercise12(10)
-    #     self.assertEqual(cm.shape[0],20)
-    #     self.assertEqual(cm[0,0],1)
-    #     self.assertEqual(cm[0,1],0)
-    #     cm = exercise12(5)
-    #     self.assertEqual(cm.shape[0],10)
-    #     self.assertEqual(cm[0,0],1)
-    #     self.assertEqual(cm[0,1],0)        
+    def test_exercise12(self):
+        print('Testing exercise 12')
+        cm = exercise12(10)
+        self.assertEqual(cm.shape[0],20)
+        self.assertEqual(cm[0,0],1)
+        self.assertEqual(cm[0,1],0)
+        cm = exercise12(5)
+        self.assertEqual(cm.shape[0],10)
+        self.assertEqual(cm[0,0],1)
+        self.assertEqual(cm[0,1],0)        
 
 
-    # def test_exercise11(self):
-    #     print('Testing exercise 11')
-    #     a1d, ar = exercise11(15)
-    #     self.assertEqual(a1d.shape[0],15)
-    #     self.assertEqual(ar.shape[0],3)
-    #     self.assertEqual(ar.shape[1],5)
+    def test_exercise11(self):
+        print('Testing exercise 11')
+        a1d, ar = exercise11(15)
+        self.assertEqual(a1d.shape[0],15)
+        self.assertEqual(ar.shape[0],3)
+        self.assertEqual(ar.shape[1],5)
 
     def test_exercise10(self):
         print('Testing exercise 10')
