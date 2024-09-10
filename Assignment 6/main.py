@@ -75,6 +75,7 @@ def exercise06():
     '''
     # ------ Place code below here \/ \/ \/ ------
     df6 = pd.read_excel('Assignment 6\data.xlsx')
+    df6.columns = ['A', 'B', 'C']
     # ------ Place code above here /\ /\ /\ ------
     return df6
 
@@ -122,9 +123,9 @@ class TestAssignment(unittest.TestCase):
        self.assertTrue('data_squared' in df.columns)
        self.assertEqual(list(df['data_squared']), [1, 4, 9])
 
-    # def test_exercise06(self):
-    #    df = exercise06()
-    #    self.assertTrue('A' in df.columns and 'B' in df.columns and 'C' in df.columns)
+    def test_exercise06(self):
+       df = exercise06()
+       self.assertTrue('A' in df.columns and 'B' in df.columns and 'C' in df.columns)
 
     def test_exercise07(self):
        df = pd.DataFrame({'A': [1, 2, None, 4], 'B': [None, 2, 3, 4]})
