@@ -74,7 +74,7 @@ def exercise06():
     Assume the Excel file has columns 'A', 'B', 'C'. Return the DataFrame.
     '''
     # ------ Place code below here \/ \/ \/ ------
-    
+    df6 = pd.read_excel('Assignment 6\data.xlsx')
     # ------ Place code above here /\ /\ /\ ------
     return df6
 
@@ -83,7 +83,7 @@ def exercise07(df):
     Given a DataFrame 'df', drop any rows that have missing values and return the cleaned DataFrame.
     '''
     # ------ Place code below here \/ \/ \/ ------
-    
+    cleaned_df = df.dropna()
     # ------ Place code above here /\ /\ /\ ------
     return cleaned_df
 
@@ -116,20 +116,20 @@ class TestAssignment(unittest.TestCase):
         self.assertTrue(set(df4.columns) == {"city", "data"})
         self.assertEqual(len(df4), 3)
 
-    # def test_exercise05(self):
-    #    df = pd.DataFrame({'city': ['A', 'B', 'C'], 'data': [1, 2, 3]})
-    #    df = exercise05(df)
-    #    self.assertTrue('data_squared' in df.columns)
-    #    self.assertEqual(list(df['data_squared']), [1, 4, 9])
+    def test_exercise05(self):
+       df = pd.DataFrame({'city': ['A', 'B', 'C'], 'data': [1, 2, 3]})
+       df = exercise05(df)
+       self.assertTrue('data_squared' in df.columns)
+       self.assertEqual(list(df['data_squared']), [1, 4, 9])
 
     # def test_exercise06(self):
     #    df = exercise06()
     #    self.assertTrue('A' in df.columns and 'B' in df.columns and 'C' in df.columns)
 
-    # def test_exercise07(self):
-    #    df = pd.DataFrame({'A': [1, 2, None, 4], 'B': [None, 2, 3, 4]})
-    #    df = exercise07(df)
-    #    self.assertEqual(df.shape[0], 2)  
+    def test_exercise07(self):
+       df = pd.DataFrame({'A': [1, 2, None, 4], 'B': [None, 2, 3, 4]})
+       df = exercise07(df)
+       self.assertEqual(df.shape[0], 2)  
 
     # def test_exercise08(self):
     #    df = pd.DataFrame({'A': [10, 20, 30], 'B': [20, 30, 40]})
