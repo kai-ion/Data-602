@@ -29,24 +29,34 @@ def q2_pandas_csv():
     df = pd.read_csv('Discussion Question\kobe.csv')
     print("\nkobe.csv")
     
-    return df.head(1)
+    return df
 
 ###------------------------------------------------------------------------------------------------------  
-# 3. Create a 1D array of numbers from 0 to 9.
-#    Desired Output: 
-#    array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-def create_array():
-    array = np.arange(10)
-    return array
+"""
+Q3. Show how to view the first 10 rows of a dataset using pandas
+"""
+def q3_pandas_head(df):
+    return df.head(10)
 
 ###------------------------------------------------------------------------------------------------------  
-# 4. Extract all odd numbers from array1.
-#    array1 = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-def odd_numbers():
-    array1 = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-    print("Original array:", array1)
-    odd_numbers = array1[array1 % 2 == 1]
-    return odd_numbers
+"""
+Q4. Write a Pandas program to compare the elements of the two Pandas Series.
+Sample Series: [2, 4, 6, 8, 10], [1, 3, 5, 7, 10]
+"""
+def q4_pandas_comparison():
+    series1 = pd.Series([2, 4, 6, 8, 10])
+    series2 = pd.Series([1, 3, 5, 7, 10])
+
+    
+    print("Series 1:")
+    print(series1)
+
+    print("\nSeries 2:")
+    print(series2)
+
+    comparison = series1 == series2
+    print("\nComparison (Series 1 == Series 2):")
+    print(comparison)
 
 ###------------------------------------------------------------------------------------------------------ 
 # 5. Get the common items between a and b.
@@ -64,28 +74,6 @@ def common_items():
     return common_items
 
 ###------------------------------------------------------------------------------------------------------  
-# 6. From array a remove all items present in array b.
-#    a = np.array([1, 2, 3, 4, 5])
-#    b = np.array([5, 6, 7, 8, 9])
-def remove_items():
-    a = np.array([1, 2, 3, 4, 5])
-    b = np.array([5, 6, 7, 8, 9])
-    print("Array a:", a)
-    print("Array b:", b)
-    result = np.setdiff1d(a, b)
-    return result
-
-###------------------------------------------------------------------------------------------------------  
-# 7. Find out if iris has any missing values.
-#    url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
-#    iris = np.genfromtxt(url, delimiter=',', dtype='float', usecols=[0,1,2,3])
-def missing_values():
-    url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
-    iris = np.genfromtxt(url, delimiter=',', dtype='float', usecols=[0,1,2,3])
-    missing_values = np.isnan(iris).sum()
-    return missing_values
-
-###------------------------------------------------------------------------------------------------------  
 
 def main():
     # Q1 Similarities and Differences:
@@ -95,15 +83,16 @@ def main():
     
     # Q2 Import a CSV file using pandas
     print("###Q2### Give an example of how to import a csv file using pandas")
-    print(q2_pandas_csv())
+    df = q2_pandas_csv()
+    print(df.head(1))
     print("\n")
     
-    # # Q3 1d array
-    # print("###Q3### Create a 1D array of numbers from 0 to 9.")
-    # print(create_array())
-    # print("\n")
+    # Q3 First 10 rows of df
+    print("###Q3### Write a Pandas program to compare the elements of the two Pandas Series.")
+    print(q4_pandas_comparison())
+    print("\n")
     
-    # # Q4 Odd Num
+    # # Q4 compare the elements of the two Pandas Series
     # print("###Q4### Extract all odd numbers from array1.")
     # print("Odd numbers:", odd_numbers())
     # print("\n")
