@@ -10,6 +10,93 @@ A row from your dataframe
 """
 
 """Sample output
+###Q1### How would you delete: An index from your dataframe, A column from your dataframe, A row from your dataframe
+Original DataFrame with Name as index:
+         Age         City   Birthdate
+Name
+Alice     24     New York  1990-05-15
+Bob       27  Los Angeles  1985-06-22
+Charlie   22      Chicago  1992-07-30
+David     32      Houston  1988-11-02
+
+DataFrame after resetting index:
+   index     Name  Age         City   Birthdate
+0      0    Alice   24     New York  1990-05-15
+1      1      Bob   27  Los Angeles  1985-06-22
+2      2  Charlie   22      Chicago  1992-07-30
+3      3    David   32      Houston  1988-11-02
+
+DataFrame after deleting the 'City' column:
+      Name  Age   Birthdate
+0    Alice   24  1990-05-15
+1      Bob   27  1985-06-22
+2  Charlie   22  1992-07-30
+3    David   32  1988-11-02
+
+DataFrame after deleting the row at index 1 (Bob):
+      Name  Age      City   Birthdate
+0    Alice   24  New York  1990-05-15
+2  Charlie   22   Chicago  1992-07-30
+3    David   32   Houston  1988-11-02
+
+
+###Q2### How do you iterate over a pandas dataframe?
+
+Iterating over rows using iterrows():
+Index: 0, Name: Alice, Age: 24, City: New York
+Index: 1, Name: Bob, Age: 27, City: Los Angeles
+Index: 2, Name: Charlie, Age: 22, City: Chicago
+Index: 3, Name: David, Age: 32, City: Houston
+
+Iterating over rows using itertuples():
+Index: 0, Name: Alice, Age: 24, City: New York
+Index: 1, Name: Bob, Age: 27, City: Los Angeles
+Index: 2, Name: Charlie, Age: 22, City: Chicago
+Index: 3, Name: David, Age: 32, City: Houston
+
+Iterating over columns:
+Column: Name, Data: ['Alice', 'Bob', 'Charlie', 'David']
+Column: Age, Data: [24, 27, 22, 32]
+Column: City, Data: ['New York', 'Los Angeles', 'Chicago', 'Houston']
+Column: Birthdate, Data: ['1990-05-15', '1985-06-22', '1992-07-30', '1988-11-02']
+
+
+###Q3### How would you convert a string to a date?
+
+DataFrame after converting 'Birthdate' from string to datetime:
+      Name  Age         City  Birthdate
+0    Alice   24     New York 1990-05-15
+1      Bob   27  Los Angeles 1985-06-22
+2  Charlie   22      Chicago 1992-07-30
+3    David   32      Houston 1988-11-02
+
+Data types after conversion:
+Name                 object
+Age                   int64
+City                 object
+Birthdate    datetime64[ns]
+dtype: object
+
+
+###Q4### What is data aggregation?  Give an example in Python.
+
+Aggregated Age Data:
+total_age      105.00
+average_age     26.25
+max_age         32.00
+min_age         22.00
+Name: Age, dtype: float64
+
+
+###Q5### What is GroupBy in Pandas (groupby()). Give an example in Python.
+
+Aggregated Age Data by City:
+             total_age  average_age  max_age  min_age
+City
+Chicago             22         22.0       22       22
+Houston             32         32.0       32       32
+Los Angeles         27         27.0       27       27
+New York            24         24.0       24       24
 
 """
 
@@ -107,16 +194,18 @@ def q4_aggregation(data):
 """
 Q5. What is GroupBy in Pandas (groupby()). Give an example in Python.
 """
-def q5_pandas_groupby():
-    df1 = pd.Series(['hello', 'to', 'cuny', 'class?'])
+def q5_pandas_groupby(data):
+    df = pd.DataFrame(data)
+    # Perform GroupBy on 'City' and aggregate the 'Age' column
+    grouped_data = df.groupby('City').agg(
+        total_age=('Age', 'sum'),
+        average_age=('Age', 'mean'),
+        max_age=('Age', 'max'),
+        min_age=('Age', 'min')
+    )
 
-    print("Original Series:")
-    print(df1)
-
-    df1 = df1.str.capitalize()
-
-    print("\nSeries after capitalization:")
-    print(df1)
+    print("\nAggregated Age Data by City:")
+    print(grouped_data)
 
 ###------------------------------------------------------------------------------------------------------  
 
@@ -147,10 +236,10 @@ def main():
     q4_aggregation(data)
     print("\n")
     
-    # # Q5 groupby function
-    # print("###Q5### What is GroupBy in Pandas (groupby()). Give an example in Python.")
-    # q5_pandas_groupby()
-    # print("\n")
+    # Q5 groupby function
+    print("###Q5### What is GroupBy in Pandas (groupby()). Give an example in Python.")
+    q5_pandas_groupby(data)
+    print("\n")
     
 
 if __name__ == "__main__":
