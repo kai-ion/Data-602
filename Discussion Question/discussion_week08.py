@@ -74,27 +74,34 @@ def q2_pandas_iterate(data):
 """
 Q3. How would you convert a string to a date?
 """
-def q3_string_date(df):
-    return df.head(10)
+def q3_string_date(data):
+    df = pd.DataFrame(data)
+    # Convert the 'Birthdate' column from string to datetime
+    df['Birthdate'] = pd.to_datetime(df['Birthdate'])
+
+    print("\nDataFrame after converting 'Birthdate' from string to datetime:")
+    print(df)
+
+    # Check the data type of the 'Birthdate' column to confirm it's datetime
+    print("\nData types after conversion:")
+    print(df.dtypes)
 
 ###------------------------------------------------------------------------------------------------------  
 """
 Q4. What is data aggregation?  Give an example in Python. 
 """
-def q4_aggregation():
-    series1 = pd.Series([2, 4, 6, 8, 10])
-    series2 = pd.Series([1, 3, 5, 7, 10])
+def q4_aggregation(data):
+    df = pd.DataFrame(data)
+    # Perform aggregation on the 'Age' column
+    age_aggregation = df['Age'].agg(
+        total_age='sum',
+        average_age='mean',
+        max_age='max',
+        min_age='min'
+    )
 
-    
-    print("Series 1:")
-    print(series1)
-
-    print("\nSeries 2:")
-    print(series2)
-
-    comparison = series1 == series2
-    print("\nComparison (Series 1 == Series 2):")
-    print(comparison)
+    print("\nAggregated Age Data:")
+    print(age_aggregation)
 
 ###------------------------------------------------------------------------------------------------------ 
 """
@@ -117,7 +124,8 @@ def main():
     # Create a sample DataFrame
     data = {'Name': ['Alice', 'Bob', 'Charlie', 'David'],
             'Age': [24, 27, 22, 32],
-            'City': ['New York', 'Los Angeles', 'Chicago', 'Houston']}
+            'City': ['New York', 'Los Angeles', 'Chicago', 'Houston'],
+            'Birthdate': ['1990-05-15', '1985-06-22', '1992-07-30', '1988-11-02']}
     
     # Q1 delete data
     print("###Q1### How would you delete: An index from your dataframe, A column from your dataframe, A row from your dataframe")
@@ -130,14 +138,14 @@ def main():
     print("\n")
     
     # # Q3 convert string to date
-    # print("###Q3### How would you convert a string to a date?")
-    # print(q3_string_date(df))
-    # print("\n")
+    print("###Q3### How would you convert a string to a date?")
+    q3_string_date(data)
+    print("\n")
     
-    # # Q4 data aggregation
-    # print("###Q4### What is data aggregation?  Give an example in Python.")
-    # q4_aggregation()
-    # print("\n")
+    # Q4 data aggregation
+    print("###Q4### What is data aggregation?  Give an example in Python.")
+    q4_aggregation(data)
+    print("\n")
     
     # # Q5 groupby function
     # print("###Q5### What is GroupBy in Pandas (groupby()). Give an example in Python.")
