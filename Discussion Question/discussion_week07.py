@@ -92,7 +92,7 @@ Q2. Give an example of how to import a csv file using pandas
 import pandas as pd
 
 def q2_pandas_csv():
-    df = pd.read_csv('Discussion Question\kobe.csv')
+    df = pd.read_csv('kobe.csv')
     print("\nkobe.csv")
     
     return df
