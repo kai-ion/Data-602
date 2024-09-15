@@ -66,6 +66,29 @@ To run the project, you'll need the following:
     pip install -r requirements.txt
     ```
 
+
+
+## How to Run
+1. **To open the notebook in your browser:**
+
+   ```bash
+   python -m notebook analysis.ipynb
+   ```
+
+2. **To execute all cells and save the output to a new file:**
+
+   ```bash
+   python -m jupyter nbconvert --to notebook --execute analysis.ipynb
+   ```
+
+3. **To execute all cells and overwrite the original file:**
+
+   ```bash
+   python -m jupyter nbconvert --to notebook --execute --inplace analysis.ipynb
+   ``` 
+
+These commands will run the notebook as per your preference.
+
 ## Project Features
 - **Data Loading**: Read the dataset into a Pandas DataFrame.
 - **Data Cleaning**: Handle missing values, duplicates, and inconsistent data types.
@@ -76,6 +99,8 @@ To run the project, you'll need the following:
 For a detailed step-by-step guide on using Pandas for data analysis with IMDb movies data, refer to this comprehensive guide:
 
 [A Comprehensive Guide to Data Analysis using Pandas - Analytics Vidhya](https://www.analyticsvidhya.com/blog/2021/05/a-comprehensive-guide-to-data-analysis-using-pandas-hands-on-data-analysis-on-imdb-movies-data/)
+
+[Quick Guide to Data Analysis Using Pandas - GitHub Repository](https://github.com/lakshanagv/Complete-guide-to-data-analysis-using-Python---IMDB-movies-data/blob/main/Quick%20guide%20to%20Data%20Analysis%20using%20Pandas.ipynb)
 
 ## License
 This project is licensed under the MIT License.
