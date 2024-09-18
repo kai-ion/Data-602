@@ -13,6 +13,11 @@ Q1. Share a link to the dataset you are planning to use for your final project/p
 
 https://www.kaggle.com/datasets/philiphyde1/nfl-stats-1999-2022
 """
+###------------------------------------------------------------------------------------------------------ 
+"""
+Q1. Why is this dataset interesting?  Why do you want to analyze it?
+
+"""
 
 
 ###------------------------------------------------------------------------------------------------------  
@@ -20,8 +25,13 @@ https://www.kaggle.com/datasets/philiphyde1/nfl-stats-1999-2022
 def main():
 
     
-    # Q1 delete data
+    # Q1 Link to dataset
     print("###Q1### Share a link to the dataset you are planning to use for your final project/proposal.")
+    
+    print("\n")
+    
+    # Q1 why is it interesting
+    print("###Q1### Why is this dataset interesting?  Why do you want to analyze it?")
     
     print("\n")
     
