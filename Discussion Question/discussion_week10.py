@@ -13,6 +13,7 @@ How can you use python libraries such as matplotlib, seaborn, plotly, etc. to in
 ###------------------------------------------------------------------------------------------------------ 
 """
 Q1. What is matplottlib and seaborn?  When would you choose one over the other?
+Matplotlib is a python plotting library in Python that lets you change appearance of charts, while Seaborn is built on top of Matplotlib and offers built-in themes and aesthetics for visualizations. Seaborn is easer to use and has more appealing graphs, whereas Matplotlib is better for customization.
 """
 ###------------------------------------------------------------------------------------------------------ 
 """
@@ -36,7 +37,7 @@ How can you use python libraries such as matplotlib, seaborn, plotly, etc. to in
 def main():
     # Q1 What is matplottlib and seaborn
     print("###Q1### What is matplottlib and seaborn?  When would you choose one over the other?")
-    print("")
+    print("Matplotlib is a python plotting library in Python that lets you change appearance of charts, while Seaborn is built on top of Matplotlib and offers built-in themes and aesthetics for visualizations. Seaborn is easer to use and has more appealing graphs, whereas Matplotlib is better for customization.")
     print("\n")
     
     # Q2 guidelines and informative visuals
