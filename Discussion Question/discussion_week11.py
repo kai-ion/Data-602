@@ -16,10 +16,10 @@ import matplotlib.pyplot as plt
 ###------------------------------------------------------------------------------------------------------ 
 """
 Q1. How do you plot a histogram in Seaborn?  
+You can use Seaborn's histplot() function to plot a histogram
 """
-def q1_histogram():
-    # Load a dataset (e.g., the 'penguins' dataset)
-    data = sns.load_dataset('penguins')
+def q1_histogram(data):
+    
 
     # Plot a histogram of the 'flipper_length_mm' feature
     sns.histplot(data['flipper_length_mm'])
@@ -28,7 +28,12 @@ def q1_histogram():
 ###------------------------------------------------------------------------------------------------------ 
 """
 Q2. Plot a histogram with NAs dropped.
+To drop missing values before plotting, you can use the .dropna() function
 """
+def q2_histogram_dropNA(data):
+    # Plot a histogram after dropping NAs
+    sns.histplot(data['flipper_length_mm'].dropna())
+    plt.show()
 ###------------------------------------------------------------------------------------------------------ 
 """
 Q3. How do you set the color for a histogram?
@@ -57,15 +62,19 @@ Q4. Change the figure size of your plot(s).
 ###------------------------------------------------------------------------------------------------------  
     
 def main():
+    # Load a dataset (e.g., the 'penguins' dataset)
+    data = sns.load_dataset('penguins')
+    
     # Q1 Histogram in seaborn
     print("###Q1### How do you plot a histogram in Seaborn?  ")
     print("You can use Seaborn's histplot() function to plot a histogram")
-    q1_histogram()
+    q1_histogram(data)
     print("\n")
     
     # Q2 Plot a histogram with NAs dropped.
     print("###Q2### Plot a histogram with NAs dropped.")
-    
+    print("To drop missing values before plotting, you can use the .dropna() function")
+    q2_histogram_dropNA(data)
     
     print("\n")
     
