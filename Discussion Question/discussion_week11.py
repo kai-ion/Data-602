@@ -13,6 +13,7 @@ You can use any dataset for examples to these questions. Some datasets can be fo
 
 import seaborn as sns
 import matplotlib.pyplot as plt
+import numpy as np
 ###------------------------------------------------------------------------------------------------------ 
 """
 Q1. How do you plot a histogram in Seaborn?  
@@ -58,9 +59,17 @@ def q4_scatterplot(data):
 ###------------------------------------------------------------------------------------------------------ 
 """
 Q5. Give example of a correlation plot.
+A heatmap shows the correlation between numerical features.
 """
 
 ###------------------------------------------------------------------------------------------------------  
+def q5_heatmap(data):
+    # Calculate the correlation matrix
+    matrix = data[['flipper_length_mm', 'body_mass_g', 'bill_length_mm', 'bill_depth_mm']].corr()
+
+    # Plot the correlation heatmap
+    sns.heatmap(matrix, annot=True, cmap='coolwarm')
+    plt.show()
 
 ###------------------------------------------------------------------------------------------------------ 
 """
@@ -99,7 +108,8 @@ def main():
     
     # Q5  Correlation plot
     print("###Q5### Give example of a correlation plot.")
-    
+    print("A heatmap shows the correlation between numerical features.")
+    q5_heatmap(data)
     print("\n")
     
     # Q6  figure size of plots
