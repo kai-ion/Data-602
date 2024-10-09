@@ -9,6 +9,28 @@ You can use any dataset for examples to these questions. Some datasets can be fo
 """
 
 """Sample output
+###Q1### How do you plot a histogram in Seaborn?  
+You can use Seaborn's histplot() function to plot a histogram
+
+
+###Q2### Plot a histogram with NAs dropped.
+To drop missing values before plotting, you can use the .dropna() function
+
+
+###Q3### How do you set the color for a histogram?
+You can set the color of the histogram using the color argument
+
+
+###Q4### What type of plot would allow you to compare two continuous features?  Give an example of code.
+A scatter plot is commonly used to compare two continuous features
+
+
+###Q5### Give example of a correlation plot.
+A heatmap shows the correlation between numerical features.
+
+
+###Q6### Change the figure size of your plot(s).
+You can change the figure size using plt.figure()
 """
 
 import seaborn as sns
