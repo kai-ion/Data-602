@@ -46,7 +46,12 @@ def q3_histogram_color(data):
 ###------------------------------------------------------------------------------------------------------ 
 """
 Q4. What type of plot would allow you to compare two continuous features?  Give an example of code.
+A scatter plot is commonly used to compare two continuous features
 """
+def q4_scatterplot(data):
+    # Scatter plot comparing 'flipper_length_mm' and 'body_mass_g'
+    sns.scatterplot(x='flipper_length_mm', y='body_mass_g', data=data)
+    plt.show()
 
 ###------------------------------------------------------------------------------------------------------  
 
@@ -88,7 +93,8 @@ def main():
     
     # Q4  Compare two continuous features
     print("###Q4### What type of plot would allow you to compare two continuous features?  Give an example of code.")
-    
+    print("A scatter plot is commonly used to compare two continuous features")
+    q4_scatterplot(data)
     print("\n")
     
     # Q5  Correlation plot
@@ -97,7 +103,7 @@ def main():
     print("\n")
     
     # Q6  figure size of plots
-    print("###Q5### Change the figure size of your plot(s).")
+    print("###Q6### Change the figure size of your plot(s).")
     
     print("\n")
     
