@@ -46,6 +46,7 @@ def q1_histogram(data):
 
     # Plot a histogram of the 'flipper_length_mm' feature
     sns.histplot(data['flipper_length_mm'])
+    plt.savefig('./Discussion Question/week11/histogram.png')
     plt.show()
     
 ###------------------------------------------------------------------------------------------------------ 
@@ -56,6 +57,7 @@ To drop missing values before plotting, you can use the .dropna() function
 def q2_histogram_dropNA(data):
     # Plot a histogram after dropping NAs
     sns.histplot(data['flipper_length_mm'].dropna())
+    plt.savefig('./Discussion Question/week11/histogramNaDropped.png')
     plt.show()
 ###------------------------------------------------------------------------------------------------------ 
 """
@@ -65,6 +67,7 @@ You can set the color of the histogram using the color argument
 def q3_histogram_color(data):
     # Set the color of the histogram to blue
     sns.histplot(data['flipper_length_mm'].dropna(), color='blue')
+    plt.savefig('./Discussion Question/week11/histogramColor.png')
     plt.show()
 ###------------------------------------------------------------------------------------------------------ 
 """
@@ -74,6 +77,7 @@ A scatter plot is commonly used to compare two continuous features
 def q4_scatterplot(data):
     # Scatter plot comparing 'flipper_length_mm' and 'body_mass_g'
     sns.scatterplot(x='flipper_length_mm', y='body_mass_g', data=data)
+    plt.savefig('./Discussion Question/week11/scatterplot.png')
     plt.show()
 
 ###------------------------------------------------------------------------------------------------------  
@@ -91,6 +95,7 @@ def q5_heatmap(data):
 
     # Plot the correlation heatmap
     sns.heatmap(matrix, annot=True, cmap='coolwarm')
+    plt.savefig('./Discussion Question/week11/heatmap.png')
     plt.show()
 
 ###------------------------------------------------------------------------------------------------------ 
@@ -102,6 +107,7 @@ def q6_figsize(data):
     # Change the figure size for a histogram
     plt.figure(figsize=(10, 6))
     sns.histplot(data['flipper_length_mm'].dropna())
+    plt.savefig('./Discussion Question/week11/figsize.png')
     plt.show()
 
 
