@@ -73,8 +73,15 @@ def q5_heatmap(data):
 
 ###------------------------------------------------------------------------------------------------------ 
 """
-Q4. Change the figure size of your plot(s).
+Q6. Change the figure size of your plot(s).
+You can change the figure size using plt.figure()
 """
+def q6_figsize(data):
+    # Change the figure size for a histogram
+    plt.figure(figsize=(10, 6))
+    sns.histplot(data['flipper_length_mm'].dropna())
+    plt.show()
+
 
 ###------------------------------------------------------------------------------------------------------  
     
@@ -114,7 +121,8 @@ def main():
     
     # Q6  figure size of plots
     print("###Q6### Change the figure size of your plot(s).")
-    
+    print("You can change the figure size using plt.figure()")
+    q6_figsize(data)
     print("\n")
     
 
