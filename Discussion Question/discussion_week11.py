@@ -10,10 +10,21 @@ You can use any dataset for examples to these questions. Some datasets can be fo
 
 """Sample output
 """
+
+import seaborn as sns
+import matplotlib.pyplot as plt
 ###------------------------------------------------------------------------------------------------------ 
 """
 Q1. How do you plot a histogram in Seaborn?  
 """
+def q1_histogram():
+    # Load a dataset (e.g., the 'penguins' dataset)
+    data = sns.load_dataset('penguins')
+
+    # Plot a histogram of the 'flipper_length_mm' feature
+    sns.histplot(data['flipper_length_mm'])
+    plt.show()
+    
 ###------------------------------------------------------------------------------------------------------ 
 """
 Q2. Plot a histogram with NAs dropped.
@@ -48,7 +59,8 @@ Q4. Change the figure size of your plot(s).
 def main():
     # Q1 Histogram in seaborn
     print("###Q1### How do you plot a histogram in Seaborn?  ")
-    print("")
+    print("You can use Seaborn's histplot() function to plot a histogram")
+    q1_histogram()
     print("\n")
     
     # Q2 Plot a histogram with NAs dropped.
