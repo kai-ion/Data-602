@@ -37,9 +37,12 @@ def q2_histogram_dropNA(data):
 ###------------------------------------------------------------------------------------------------------ 
 """
 Q3. How do you set the color for a histogram?
-
+You can set the color of the histogram using the color argument
 """
-
+def q3_histogram_color(data):
+    # Set the color of the histogram to blue
+    sns.histplot(data['flipper_length_mm'].dropna(), color='blue')
+    plt.show()
 ###------------------------------------------------------------------------------------------------------ 
 """
 Q4. What type of plot would allow you to compare two continuous features?  Give an example of code.
@@ -75,12 +78,12 @@ def main():
     print("###Q2### Plot a histogram with NAs dropped.")
     print("To drop missing values before plotting, you can use the .dropna() function")
     q2_histogram_dropNA(data)
-    
     print("\n")
     
     # Q3 Set color for a histogram
     print("###Q3### How do you set the color for a histogram?")
-    
+    print("You can set the color of the histogram using the color argument")
+    q3_histogram_color(data)
     print("\n")
     
     # Q4  Compare two continuous features
