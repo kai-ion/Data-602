@@ -105,6 +105,21 @@ def main():
     
     print("\n")
     
+    # Q7  KNN
+    print("###Q7### What is the KNN algorithm? (Write a brief description) ")
+    
+    print("\n")
+    
+    # Q8  Advantaged of KNN
+    print("###Q8### What are advantaged of the KNN algorithm? ")
+    
+    print("\n")
+    
+    # Q9  applications of supervised ML
+    print("###Q9### What are disadvantages of the KNN algorithm?  ")
+    
+    print("\n")
+    
 
 if __name__ == "__main__":
     main()
