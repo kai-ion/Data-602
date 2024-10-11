@@ -54,7 +54,9 @@ To avoiding Overfitting:
 """
 Q4. What is 'training' and 'test' set in a machine learning model?
 """
-q4 = """
+q4 = """Answer:
+- Training Set: A subset of the dataset used to train the model, where the model learns patterns from the input features and their corresponding outputs.
+- Test Set: A separate subset that is not used during training but is used to evaluate the model's performance and generalization to unseen data.
 """
 
 ###------------------------------------------------------------------------------------------------------  
@@ -63,7 +65,11 @@ q4 = """
 """
 Q5. How can you handle missing or corrupted data in a dataset?
 """
-
+q5 = """Answer:
+You can start wtih removing data by dropping rows or columns with missing values.
+Or you can replace missing values with statistical methods (mean, median, mode) or use advanced methods like KNN or regression imputation.
+Then you can add an additional column indicating whether data was missing, to give the model information about missingness.
+"""
 ###------------------------------------------------------------------------------------------------------  
 
 ###------------------------------------------------------------------------------------------------------ 
@@ -114,7 +120,7 @@ def main():
     
     # Q4  training and test set
     print("###Q4### What is 'training' and 'test' set in a machine learning model?")
-    
+    print(q4)
     print("\n")
     
     # Q5  Missing or corrupted data
