@@ -76,7 +76,9 @@ Then you can add an additional column indicating whether data was missing, to gi
 """
 Q6. What are some applications of supervised machine learning? 
 """
-
+q6 = """Answer:
+Some applications are image classification, spam detection, speech or image recognition, maintenance preditionc, credit scoring
+"""
 ###------------------------------------------------------------------------------------------------------  
 
 ###------------------------------------------------------------------------------------------------------ 
