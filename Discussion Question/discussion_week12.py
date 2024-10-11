@@ -85,19 +85,32 @@ Some applications are image classification, spam detection, speech or image reco
 """
 Q7. What is the KNN algorithm? (Write a brief description)
 """
-
+q7 = """Answer:
+KNN is a simple, instance-based learning algorithm that classifies data points based on the 'k' closest neighbors in the feature space. 
+The distance (usually Euclidean) between data points is calculated, and the majority class among the neighbors is chosen as the prediction.
+"""
 ###------------------------------------------------------------------------------------------------------  
 
 ###------------------------------------------------------------------------------------------------------ 
 """
 Q8. What are advantaged of the KNN algorithm?
 """
-
+q8 = """Answer:
+- Knn is simple and easy to implement, and requires minimal configuration.
+- It can be used for both classification and regression problems.
+- It makes no assumptions about the data's distribution (non-parametric).
+"""
 ###------------------------------------------------------------------------------------------------------  
 
 ###------------------------------------------------------------------------------------------------------ 
 """
 Q9. What are disadvantages of the KNN algorithm? 
+"""
+
+q9 = """Asnwer:
+- It can be expensive, as the number of data points grows, KNN becomes slower since it computes the distance for each new query.
+- KNN can be impacted by sensitive to noisy data, irrelevant features or outliers in the data.
+- Performance decreases with higher-dimensional data unless dimensionality reduction techniques are applied.
 """
 
 ###------------------------------------------------------------------------------------------------------  
