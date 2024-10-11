@@ -29,6 +29,12 @@ There are several types of machine learning, each with special characteristics a
 """
 Q2. What is the difference between supervised and unsupervised machine learning? When would you use one method over another?
 """
+q2 = """Answer:
+- Supervised Learning: The model is provided with labeled training data (input-output pairs) to learn the mapping from inputs to outputs. 
+Use supervised learning when you have labeled data and need to predict outcomes, such as predicting stock prices or classifying emails.
+- Unsupervised Learning: The model is provided with data that does not have labeled outputs. It looks for patterns or groupings in the data. 
+Use unsupervised learning when you want to find patterns or groupings in unlabeled data, like customer segmentation or anomaly detection.
+"""
 
 ###------------------------------------------------------------------------------------------------------ 
 """
@@ -88,7 +94,7 @@ def main():
     
     # Q2 Supervised vs unsupervised ML
     print("###Q2### What is the difference between supervised and unsupervised machine learning? When would you use one method over another?")
-    
+    print(q2)
     print("\n")
     
     # Q3 Overfitting
