@@ -140,27 +140,27 @@ def main():
     
     # Q5  Missing or corrupted data
     print("###Q5### How can you handle missing or corrupted data in a dataset?")
-    
+    print(q5)
     print("\n")
     
     # Q6  applications of supervised ML
     print("###Q6### What are some applications of supervised machine learning? ")
-    
+    print(q6)
     print("\n")
     
     # Q7  KNN
     print("###Q7### What is the KNN algorithm? (Write a brief description) ")
-    
+    print(q7)
     print("\n")
     
     # Q8  Advantaged of KNN
     print("###Q8### What are advantaged of the KNN algorithm? ")
-    
+    print(q8)
     print("\n")
     
     # Q9  applications of supervised ML
     print("###Q9### What are disadvantages of the KNN algorithm?  ")
-    
+    print(q9)
     print("\n")
     
 
