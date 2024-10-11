@@ -40,12 +40,22 @@ Use unsupervised learning when you want to find patterns or groupings in unlabel
 """
 Q3. What is overfitting, how can you avoid it?
 """
+q3 = """Answer:
+Overfitting is when a model learns too much from the training data, capturing noise and irrelevant details, resulting in poor generalization to new data.
+To avoiding Overfitting:
+- Use cross-validation.
+- Apply regularization methods (L1, L2).
+- Simplify the model by reducing the number of features or parameters.
+- Gather more data or use data augmentation.
+- Use early stopping during training for models like neural networks.
+"""
 
 ###------------------------------------------------------------------------------------------------------ 
 """
 Q4. What is 'training' and 'test' set in a machine learning model?
 """
-
+q4 = """
+"""
 
 ###------------------------------------------------------------------------------------------------------  
 
@@ -99,7 +109,7 @@ def main():
     
     # Q3 Overfitting
     print("###Q3### What is overfitting, how can you avoid it?")
-    
+    print(q3)
     print("\n")
     
     # Q4  training and test set
