@@ -17,7 +17,13 @@
 """
 Q1. What are the different types of machine learning? 
 """
-
+q1 = """Answer: 
+There are several types of machine learning, each with special characteristics and applications. Some of the main types of machine learning algorithms are as follows:
+- Supervised Learning: The model is trained on labeled data, learning the relationship between input features and target outputs (e.g., classification, regression).
+- Unsupervised Learning: The model finds patterns and relationships in data without labeled outcomes (e.g., clustering, dimensionality reduction).
+- Semi-Supervised Learning: A combination of labeled and unlabeled data is used, where the model learns from a small amount of labeled data and a large amount of unlabeled data.
+- Reinforcement Learning: An agent interacts with an environment and learns to make decisions by receiving feedback in the form of rewards or penalties.
+"""
     
 ###------------------------------------------------------------------------------------------------------ 
 """
@@ -77,7 +83,7 @@ def main():
     
     # Q1 Types of machine learning
     print("###Q1### What are the different types of machine learning?   ")
-    
+    print(q1)
     print("\n")
     
     # Q2 Supervised vs unsupervised ML
