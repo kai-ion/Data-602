@@ -1,6 +1,7 @@
 NFL analytics
 
 datasets
+- https://www.kaggle.com/datasets/philiphyde1/nfl-stats-1999-2022
 - https://www.kaggle.com/datasets/nickcantalupa/nfl-team-data-2003-2023/code
 
 Ideas 
